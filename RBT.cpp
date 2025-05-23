@@ -234,7 +234,7 @@ BinarySearchTree::Node *BinarySearchTree::Node::erase_child(Node *target)
             rt_subtree = rt_subtree -> left;
         }
         target -> keyValuePair = rt_subtree -> keyValuePair;
-        target -> right = erase_child(target -> right);
+        rt_subtree -> parent -> right = erase_child(rt_subtree);
         return target;
     }
 }

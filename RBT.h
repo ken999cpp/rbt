@@ -78,6 +78,7 @@ public:
 
         bool operator==(const Iterator &other) const;
         bool operator!=(const Iterator &other) const;
+        friend std::ostream& operator<<(std::ostream& os, const Iterator& it);
 
     private:
         Node *_node;
@@ -101,6 +102,7 @@ public:
 
         bool operator==(const ConstIterator &other) const;
         bool operator!=(const ConstIterator &other) const;
+        friend std::ostream& operator<<(std::ostream& os, const ConstIterator& it);
 
     private:
         const Node *_node;

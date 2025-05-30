@@ -674,7 +674,7 @@ BinarySearchTree::ConstIterator BinarySearchTree::max() const
 }
 BinarySearchTree::ConstIterator BinarySearchTree::min(const Key &key) const
 {   
-    auto er = equalRange(30);
+    auto er = equalRange(key);
     auto min = er.first;
     for (auto it = er.first; it != er.second; ++it)
     {
@@ -687,7 +687,7 @@ BinarySearchTree::ConstIterator BinarySearchTree::min(const Key &key) const
 }
 BinarySearchTree::ConstIterator BinarySearchTree::max(const Key &key) const
 {
-    auto er = equalRange(30);
+    auto er = equalRange(key);
     auto max = er.first;
     for (auto it = er.first; it != er.second; ++it)
     {

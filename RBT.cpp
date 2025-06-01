@@ -158,13 +158,13 @@ void BinarySearchTree::Node::insert(const Key &key, const Value &value)
     else
     {
         if (!right)
-    {
-        right = new Node(key, value, this);
-    }
-    else
-    {
-        right -> insert(key, value);
-    }
+        {
+            right = new Node(key, value, this);
+        }
+        else
+        {
+            right -> insert(key, value);
+        }
     }
 }
 void BinarySearchTree::insert(const Key &key, const Value &value)
